@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Settings</title>
+    <style>
+        /* CSS สำหรับจัดหน้าเว็บให้ดูง่ายขึ้น */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            transition: background-color 0.5s, color 0.5s;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="color"], select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box; /* เพื่อให้ padding ไม่ขยายความกว้าง */
+        }
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #saveBtn {
+            background-color: #28a745;
+            color: white;
+        }
+        #resetBtn {
+            background-color: #dc3545;
+            color: white;
+        }
+        /* คลาสสำหรับขนาดฟอนต์ */
+        .font-small { font-size: 12px; }
+        .font-medium { font-size: 16px; }
+        .font-large { font-size: 20px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>ตั้งค่าหน้าเว็บ</h1>
+
+        <div class="form-group">
+            <label for="bgColor">1. Background Color</label>
+            <input type="color" id="bgColor">
+        </div>
+
+        <div class="form-group">
+            <label for="fontColor">2. Font Color</label>
+            <input type="color" id="fontColor">
+        </div>
+
+        <div class="form-group">
+            <label for="fontSize">3. Font Size</label>
+            <select id="fontSize">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+        </div>
+
+        <button id="saveBtn">Save</button>
+        <button id="resetBtn">Reset</button>
+    </div>
+
+    <hr style="margin: 30px 0;">
+
+    <div id="displayText">
+        <h2>ตัวอย่างข้อความ</h2>
+        <p>
+            เนื้อหาส่วนนี้จะเปลี่ยนไปตามการตั้งค่าที่คุณเลือก (สีพื้นหลัง, สีตัวอักษร, และขนาดตัวอักษร)
+            เมื่อคุณกดปุ่ม "Save" และเปิดหน้านี้ใหม่ การตั้งค่าจะถูกจดจำไว้
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
